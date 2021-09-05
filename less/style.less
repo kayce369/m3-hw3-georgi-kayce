@@ -1,7 +1,90 @@
 @import "mixins";
 @import "variables";
 
+* {
+    .reset;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
 
+.contain {
+    width: 75%;
+    margin: @center;
+}
+
+h1 {
+    display: none;
+}
+
+h2 {
+    .heading;
+}
+
+.red {
+    color: @secondary-color;
+}
+
+.lower {
+    text-transform: lowercase;
+}
+
+
+header {
+    background-color: @primary-color;
+    padding: 40px 0;
+    nav {
+        ul {
+            li {
+                display: inline;
+                padding: 20px;
+                a {
+                    .link;
+                }
+                .cap-link {
+                    .upper-link
+                }
+            }
+        }
+    }
+}
+
+.top {
+    background-image: url("../img/banner-bg.png");
+    height: 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    button {
+        margin: @center;
+    }
+}
+
+.top:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #383838;
+    opacity: 33%;
+    z-index: 1;
+}
+
+.text {
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    display: block;
+    margin: @center;
+    padding: 50px 0;
+}
+
+button {
+    .btn;
+}
