@@ -12,7 +12,6 @@ body {
 .contain {
     width: 75%;
     margin: @center;
-    display: flex;
     padding: 50px 0;
 }
 
@@ -49,7 +48,7 @@ header {
         ul {
             li {
                 display: inline;
-                padding: 20px;
+                padding: 2%;
                 a {
                     .link;
                 }
@@ -91,18 +90,25 @@ header {
 }
 
 .logo {
-    display: block;
     margin: @center;
     padding: 50px 0;
+    text-align: center;
+    img {
+        max-width: 449px;
+    }
 }
 
 button {
     .btn;
 }
 
-
 .text-fig {
-    margin: 0 50px;
+    margin: @center;
+    width: 176px;
+}
+
+img {
+    width: 100%;
 }
 
 .grey {
@@ -123,5 +129,22 @@ footer {
     figure {
         width: 30%;
         margin: @center;
+    }
+}
+
+@media (min-width: 521px) {
+    .contain {
+        display: flex;
+    }
+
+    .text-fig {
+        flex-shrink: 0;
+        padding: 0 40px;
+    }
+}
+
+@media (min-width: 600px) {
+    .logo {
+        width: 50%;
     }
 }
